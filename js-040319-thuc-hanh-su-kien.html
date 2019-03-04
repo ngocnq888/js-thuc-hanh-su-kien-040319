@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực Hành Sự Kiện 04/03/19</title>
+</head>
+<body>
+<h3>Thực Hành Sự Kiện 04/03/19</h3>
+<form>
+    <img id="myImage" src="qua-bong.jpg" style="width: 300px;">
+    <p>Click button below to move the picture to right</p>
+    <input type="button" value="Click me !" onclick="moveright()" />
+</form>
+<script>
+    var img = null;
+    function init(){
+        img = document.getElementById("myImage");
+        img.style.position = 'relative';
+        img.style.left = '0px';
+    }
+
+    function moveright() {
+        img.style.left = parseInt(img.style.left) + 10 + 'px';
+    }
+    window.onload = init();
+</script>
+</body>
+</html>
